@@ -32,7 +32,7 @@ namespace WishList.Controllers
         [HttpPost]
         public IActionResult Create(Item item)
         {
-            _context.Items.ToList().Add(item);
+            _context.Items.Add(item);
             _context.SaveChanges();
             return Index();
         }
